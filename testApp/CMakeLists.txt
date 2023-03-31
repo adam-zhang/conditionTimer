@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.5)
+project(testApp)
+add_definitions(-Wall)
+include_directories(${CMAKE_SOURCE_DIR}/lib)
+set(CMAKE_CXX_STANDARD 14)
+set(sources main.cpp)
+add_executable(${PROJECT_NAME} ${sources})
+target_link_libraries(${PROJECT_NAME} single_thread_timer)
